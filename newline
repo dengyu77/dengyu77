@@ -1,0 +1,9 @@
+import csv
+ 
+with open("data.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(["Title", "Price"])
+    for item in items:
+        title = item.select(".title")[0].text
+        price = item.select(".price")[0].text
+        writer.writerow([title, price])
