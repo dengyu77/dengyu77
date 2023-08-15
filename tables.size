@@ -1,0 +1,16 @@
+bool insert(const pair<K, V>& kv)
+		{
+			size_t hashi = kv.first % _tables.size();
+			size_t i = 1;
+			size_t index = hashi;
+			while (_tables[index]._state == EXIST)
+			{
+				index = hashi + i;
+				index %= _tables.size();
+				++i;
+			}
+			_tables[index]._kv = kv;
+			_tables[index]._state = EXIST;
+			++_n;
+			return true;
+		}
