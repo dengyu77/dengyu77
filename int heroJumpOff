@@ -1,0 +1,18 @@
+int jumpHeightMax;
+
+void init()
+
+{
+
+//...
+
+jumpHeightMax =  345 - imgHeros[0].getheight() - 120;
+
+}
+int heroJumpOff;
+void init()
+{
+///....
+heroJumpOff = -4;
+
+}
